@@ -70,7 +70,7 @@ async function processExpenses({
     if (transactionDate < startTimestamp || transactionDate > endTimestamp)
       return;
 
-    const amount = Math.abs(row.amount || 0);
+    const amount = row.amount;
 
     // Handle case where there's no parent category
     if (!row["parent category"] && row.category) {
@@ -151,8 +151,8 @@ const applyManualOverrides = (
 // Example usage:
 
 const manualOverrides: CategoryTotals = {
-  Mortgage: { total: 123, categories: {} },
-  "Property Taxes": { total: 456, categories: {} },
+  Mortgage: { total: 70_944, categories: {} },
+  "Property Taxes": { total: 22_555, categories: {} },
 };
 
 const options: ProcessExpensesOptions = {
