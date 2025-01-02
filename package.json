@@ -1,0 +1,15 @@
+{
+  "name": "copilot-money-csv-parser",
+  "module": "main.ts",
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@types/papaparse": "^5.3.15",
+    "papaparse": "^5.4.1"
+  }
+}
